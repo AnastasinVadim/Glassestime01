@@ -196,7 +196,7 @@ p {
 
 /* styles.css */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .header-container {
         padding: 10px;
     }
