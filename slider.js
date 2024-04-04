@@ -1,23 +1,36 @@
-// slider.js
-
-const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.slide');
-let currentIndex = 0;
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.transform = translateX(${100 * (i - index)}%);
-    });
-}
-
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-}
-
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    showSlide(currentIndex);
-}
-
-setInterval(nextSlide, 3000); // Автоматическое переключение слайдов каждые 3 секунды
+jQuery(function ($) {
+    $(document).ready(function() {
+        $(".slider").slick({
+          arrows: true,
+          dots: true,
+          prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+          nextArrow: '<button type="button" class="slick-next">Next</button>',
+          responsive: [
+            {
+              breakpoint: 560,
+              settings: {
+                arrows: true,
+                dots: true,
+                slidesToScroll: 1,
+                slidesToShow: 1
+              }
+            }
+          ],
+          slidesToScroll: 1,
+          slidesToShow: 3
+        });
+        
+        var slider = $(".slider");
+        var currentPage = $("#current-page");
+        var totalPages = $("#total-pages");
+    
+        slider.on("afterChange", function(event, slick, currentSlide) {
+          currentPage.text(currentSlide + 1);
+        });
+    
+        slider.on("init reInit afterChange", function(event, slick, currentSlide) {
+          var slides = slick.slideCount;
+          totalPages.text(slides);
+        });
+      });
+});
