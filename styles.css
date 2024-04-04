@@ -118,44 +118,84 @@ body {
 
 
 
+
+
 .site-info {
     background-color: #f9f9f9;
     padding: 20px;
 }
 
-/* styles.css */
 
+
+
+
+
+
+
+
+
+
+/* slider.js */
 .slider {
-    display: flex;
-    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
 }
 
 .slide {
-    flex: 0 0 100%; /* Определяем ширину каждого слайда */
-    transition: transform 0.5s; /* Добавляем плавный переход */
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
 }
 
-img {
+.slide img {
     max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 h3 {
-    margin: 10px 0;
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #333;
 }
 
-.contacts {
-    background-color: #f1f1f1;
-    padding: 20px;
+p {
+    color: #666;
 }
 
-.reviews {
-    /* Стили для отзывов пользователей */
+.slick-prev, .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
 }
 
 
 
 
 
+
+
+
+
+
+
+/*mobile*/
 
 @media only screen and (max-width: 768px) {
     .header-container {
