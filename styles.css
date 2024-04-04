@@ -198,7 +198,7 @@ p {
 
 @media only screen and (max-width: 768px) {
     .header-container {
-        padding: auto;
+        padding: 10px;
     }
 
     .site-title {
