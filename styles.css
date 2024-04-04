@@ -6,7 +6,6 @@ body {
     padding: 0;
 }
 
-
 /*шапка сайта*/
 .header-container {
     display: flex;
@@ -22,11 +21,6 @@ body {
     margin: auto; /* Добавляем margin: auto; для центрирования */
 }
 
-
-
-
-
-
 /*korzina*/
 .cart {
     background-color: #ff6600;
@@ -40,27 +34,19 @@ body {
     left: 20px; /* Размещаем слева с отступом 20px */
     transform: translateY(-50%); /* Центрируем вертикально */
 }
-
 .cart h2 {
     text-align: center;
 }
-
 .cart-items {
     list-style-type: none;
     padding: 0;
 }
-
 .cart-items li {
     margin-bottom: 5px;
 }
-
 .total {
     text-align: right;
 }
-
-
-
-
 
 /*katalog*/
 .catalog-button {
@@ -107,33 +93,15 @@ body {
     color: inherit; /* Наследовать цвет текста */
     text-decoration: none; /* Убрать подчеркивание */
 }
-
 .catalog-menu a:hover {
     color: #cb5100; /* Наследовать цвет текста при наведении */
     text-decoration: none; /* Убрать подчеркивание при наведении */
 }
 
-
-
-
-
-
-
-
 .site-info {
     background-color: #f9f9f9;
     padding: 20px;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* slider.js */
 .slider {
@@ -166,11 +134,10 @@ p {
 }
 
 .slick-prev, .slick-next {
-    position: absolute;
+    position: auto;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #333;
-    color: #fff;
+    background-color: #666;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -178,50 +145,87 @@ p {
 }
 
 .slick-prev {
-    left: 10px;
+    left: -50px;
 }
 
 .slick-next {
-    right: 10px;
+    right: -50px;
+}
+
+/*ниже стрелка*/
+.arrow-8 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 30px auto 80px auto;
+}
+.arrow-8:before,
+.arrow-8:after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-left: 26px solid #ff6600;
+    border-bottom: 26px solid #ff6600;
+    animation: arrow-8 3s linear infinite;
+}
+.arrow-8:after {
+    animation: arrow-8 3s linear infinite -1.5s;
+}
+@keyframes arrow-8 {
+    0% {
+        opacity: 0;
+        transform: translate(0, -53px) rotate(-45deg);
+    }
+    10%, 90% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;  
+        transform: translate(0, 0) rotate(-45deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, 53px) rotate(-45deg);
+    }
 }
 
 
 
 
+/* styles.css */
 
-
-
-
-
-
-
-/*mobile*/
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     .header-container {
-        padding: 10px; /* Уменьшаем отступы */
+        padding: 10px;
     }
 
     .site-title {
-        font-size: 30px; /* Уменьшаем размер шрифта */
+        font-size: 30px;
     }
 
     .cart {
-        padding: 5px 10px; /* Уменьшаем отступы */
-        left: 10px; /* Перемещаем корзину влево */
+        padding: 8px 16px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .cart h2 {
+        font-size: 1em;
     }
 
     .catalog-button {
-        padding: 5px 10px; /* Уменьшаем отступы */
-        right: 10px; /* Перемещаем кнопку каталога вправо */
+        padding: 8px 16px;
+        top: 10px;
+        right: 10px;
     }
 
     .catalog-menu {
-        top: calc(50% + 20px); /* Перемещаем меню каталога вниз */
-        right: 10px; /* Перемещаем меню каталога вправо */
+        top: calc(50% + 20px);
+        right: 10px;
     }
-}
-@media only screen and (max-width: 768px) {
+
     .slider {
         width: 90%;
     }
@@ -239,8 +243,7 @@ p {
     }
 
     .slick-prev, .slick-next {
-        padding: 3px 6px;
-        font-size: 0.8em;
+        padding: 5px 8px;
     }
 }
 
