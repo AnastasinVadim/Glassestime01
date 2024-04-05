@@ -145,11 +145,10 @@ p {
     position: auto;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #666;
+    background-color: #ededed;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
-    cursor: pointer;
 }
 
 /*ниже стрелка*/
@@ -198,6 +197,7 @@ p {
 @media only screen and (max-width: 768px) {
     .header-container {
         padding: 10px;
+        max-width: auto;
     }
 
     .site-title {
@@ -207,6 +207,8 @@ p {
     .site-info {
         font-size: 15px;
         padding: 10px;
+        max-width: 99;
+        border-radius: 0px;
     }
 
     .cart {
@@ -237,7 +239,7 @@ p {
     }
 
     h3 {
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
 
     p {
