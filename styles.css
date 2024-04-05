@@ -152,14 +152,6 @@ p {
     cursor: pointer;
 }
 
-.slick-prev {
-    left: -30px;
-}
-
-.slick-next {
-    right: -30px;
-}
-
 /*ниже стрелка*/
 .arrow-8 {
     position: relative;
