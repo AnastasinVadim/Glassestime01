@@ -1,7 +1,7 @@
 /* styles.css */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Georgia, serif; /* Пример шрифта - Roboto */
     margin: 0;
     padding: 0;
 }
@@ -99,9 +99,18 @@ body {
 }
 
 .site-info {
-    background-color: #fff;
+    background-color: #ccc;
+    color: #333;
     padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    max-width: 1280px;
+    margin: 20px auto; /* Добавляем промежуток сверху и снизу */
+    border-radius: 10px; /* Закругляем края контейнера */
 }
+
+
+
 
 /* slider.js */
 .slider {
@@ -194,7 +203,7 @@ p {
 
 
 
-/* styles.css */
+/* mobile */
 
 @media only screen and (max-width: 768px) {
     .header-container {
@@ -203,6 +212,11 @@ p {
 
     .site-title {
         font-size: 30px;
+    }
+    
+    .site-info {
+        font-size: 16px;
+        padding: 15px;
     }
 
     .cart {
