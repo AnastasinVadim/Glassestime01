@@ -211,6 +211,7 @@ p {
         margin: 0px;
         border-radius: 0px;
         border-block-end: 1px solid black;
+        margin-block-end: 10px;
     }
 
     .cart {
