@@ -208,7 +208,9 @@ p {
         font-size: 15px;
         padding: 10px;
         max-width: 99;
+        margin: 0px;
         border-radius: 0px;
+        border-block-end: 1px solid black;
     }
 
     .cart {
