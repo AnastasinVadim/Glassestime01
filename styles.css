@@ -254,7 +254,7 @@ p {
     }
 
     .slick-prev, .slick-next {
-        padding: 5px 8px;
+        display: none;
     }
 }
 
