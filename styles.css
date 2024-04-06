@@ -6,16 +6,6 @@ body {
     padding: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
 .content {
     margin-top: 100px; /* Добавляем отступ сверху контенту, чтобы он начинался ниже закрепленной шапки */
 }
@@ -351,11 +341,11 @@ body {
 
 @media only screen and (min-width: 769px) {
     .slick-prev {
-        left: -30px; /* Позиция левой стрелки на компьютере */
+        display: none;
     }
 
     .slick-next {
-        right: -30px; /* Позиция правой стрелки на компьютере */
+        display: none;
     }
 }
 
