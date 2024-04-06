@@ -38,6 +38,11 @@
     display: inline-block; /* Отображаем иконки в одной строке */
 }
 
+footer {
+    background-color: #303030;
+    padding: 5px;
+    text-align: left;
+  }
 
 @media only screen and (max-width: 600px) {
     .contact-info {
