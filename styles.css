@@ -6,6 +6,8 @@ body {
     padding: 0;
 }
 
+
+
 .content {
     margin-top: 100px; /* Добавляем отступ сверху контенту, чтобы он начинался ниже закрепленной шапки */
 }
@@ -38,6 +40,18 @@ body {
     font-size: 40px;
     margin: auto; /* Добавляем margin: auto; для центрирования */
 }
+.site-title a {
+    color: inherit; /* Сохранить цвет текста родительского элемента */
+    text-decoration: none; /* Убрать подчеркивание */
+    transition: color 0.3s, font-size 0.3s; /* Анимация изменения цвета и размера шрифта */
+}
+.site-title a:hover {
+    color: inherit; /* Сохранить цвет текста */
+    text-decoration: none; /* Убрать подчеркивание */
+    font-size: 1.1em; /* Увеличить размер шрифта при наведении */
+}
+
+
 
 /*korzina*/
 .cart {
@@ -269,6 +283,15 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
 /* mobile */
 @media only screen and (max-width: 600px) {
     .header-container {
@@ -341,11 +364,11 @@ body {
 
 @media only screen and (min-width: 769px) {
     .slick-prev {
-        display: none;
+        left: -30px; /* Позиция левой стрелки на компьютере */
     }
 
     .slick-next {
-        display: none;
+        right: -30px; /* Позиция правой стрелки на компьютере */
     }
 }
 
