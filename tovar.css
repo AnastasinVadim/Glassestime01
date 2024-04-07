@@ -1,0 +1,38 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-item {
+    padding: 5px; /* Уменьшение отступов */
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+    border: none; /* Удаление видимой границы */
+    border-radius: 10px; /* Закругление углов */
+}
+
+.grid-item img {
+    width: 80%; /* Уменьшение ширины изображения */
+    height: auto;
+    transition: transform 0.3s;
+    border-radius: 10px; /* Закругление углов изображения */
+}
+
+
+.grid-item:hover {
+    border: 2px solid rgba(255, 165, 0, 0.5); /* Обводка тускло-оранжевым цветом */
+    transform: scale(1.05);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* Три столбца для планшетов и десктопов */
+        grid-gap: 20px; /* Возвращаем прежний отступ */
+    }
+    .grid-item:hover {
+        border: 2px solid rgba(255, 165, 0, 0.5); /* Обводка тускло-оранжевым цветом */
+        transform: scale(1.05);
+    }
+}
